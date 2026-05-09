@@ -6,7 +6,7 @@
 
 ## Цель проекта
 
-Цель работы — построить модель пригодности территории (Species Distribution Model, SDM) для распространения борщевика Сосновского на основе точек присутствия вида и набора независимых факторов (природно-климатических, антропогенных предикторов).
+Цель работы: построить модель пригодности территории (Species Distribution Model, SDM) для распространения борщевика Сосновского на основе точек присутствия вида и набора независимых факторов (природно-климатических, антропогенных предикторов).
 
 ## Что делает проект
 
@@ -33,15 +33,21 @@
 
 ## Использованные библиотеки
 
-elapid
-rasterio
-geopandas
-pandas
-numpy
-scikit-learn
-matplotlib
+`elapid`
+`rasterio`
+`geopandas`
+`pandas`
+`numpy`
+`scikit-learn`
+`matplotlib`
 
-В Google Colab библиотеку elapid можно установить командой: `!pip install elapid -q`
+В Google Colab библиотеку `elapid` можно установить командой: `!pip install elapid -q`
+
+## Как запустить
+Откройте `sdm-modeling_maxent.ipynb` в Google Colab или Jupyter Notebook.
+Убедитесь, что папка `data_predictors` содержит .tif-растры и CSV с точками присутствия.
+При необходимости измените путь к данным: data_dir = `"/content/drive/MyDrive/data_predictors"`
+После выполнения проверьте созданные результаты в папке `data_predictors`.
 
 ## Результаты
 
@@ -50,9 +56,3 @@ matplotlib
 `maxent_model.ela` — сохранённая модель MaxEnt;
 `maxent_prediction.tif` — raster-карта предсказанной пригодности территории;
 `permutation_importance.csv` — таблица пермутационной важности предикторов.
-
-## Как запустить
-Откройте `sdm-modeling_maxent.ipynb` в Google Colab или Jupyter Notebook.
-Убедитесь, что папка `data_predictors` содержит .tif-растры и CSV с точками присутствия.
-При необходимости измените путь к данным: data_dir = `"/content/drive/MyDrive/data_predictors"`
-После выполнения проверьте созданные результаты в папке `data_predictors`.
