@@ -29,7 +29,7 @@
 
 Список независимых переменных: выведенные из оборота сельскохозяйственные угодья (**abandoned_lands**), среднемесячные осадки июля (**precipitation**), топографический индекс влажности TWI (**twi_index**), почвенный покров (**soil_types**), расстояния до заброшенных населенных пунктов (**dist_to_villages**), автодорог (**dist_to_road**), объектов гидрографии (**dist_to_river**).
 
-Точки присутствия вида: борщевик Сосновского (**points_plants**).
+Точки присутствия вида можно скачать с репозитория: борщевик Сосновского (**points_plants**).
 
 ## Использованные библиотеки
 
@@ -45,14 +45,14 @@ matplotlib
 
 ## Результаты
 
-После выполнения ноутбука создаются следующие файлы: `maxent_model.ela, maxent_prediction.tif, permutation_importance.csv`
+После выполнения ноутбука создаются следующие файлы: `maxent_model.ela`, `maxent_prediction.tif`, `permutation_importance.csv`
 
-*maxent_model.ela* — сохранённая модель MaxEnt;
-*maxent_prediction.tif* — raster-карта предсказанной пригодности территории;
-*permutation_importance.csv* — таблица пермутационной важности предикторов.
+`maxent_model.ela` — сохранённая модель MaxEnt;
+`maxent_prediction.tif` — raster-карта предсказанной пригодности территории;
+`permutation_importance.csv` — таблица пермутационной важности предикторов.
 
 ## Как запустить
 Откройте `sdm-modeling_maxent.ipynb` в Google Colab или Jupyter Notebook.
-Убедитесь, что папка `data_predictors содержит` .tif-растры и CSV с точками присутствия.
+Убедитесь, что папка `data_predictors` содержит .tif-растры и CSV с точками присутствия.
 При необходимости измените путь к данным: data_dir = `"/content/drive/MyDrive/data_predictors"`
 После выполнения проверьте созданные результаты в папке `data_predictors`.
