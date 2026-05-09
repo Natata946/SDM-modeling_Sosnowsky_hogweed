@@ -29,18 +29,30 @@
 
 Список независимых переменных: выведенные из оборота сельскохозяйственные угодья (**abandoned_lands**), среднемесячные осадки июля (**precipitation**), топографический индекс влажности TWI (**twi_index**), почвенный покров (**soil_types**), расстояния до заброшенных населенных пунктов (**dist_to_villages**), автодорог (**dist_to_road**), объектов гидрографии (**dist_to_river**).
 
-Точки присутствия вида: борщевик Сосновского ((**points_plants**))
-
-## Структура проекта
-
-```text
-SDM-modeling_Sosnowsky_hogweed/
-├── README.md
-├── final.ipynb
-└── data_predictors/
-    ├── predictor_1.tif
-    ├── predictor_2.tif
-    ├── ...
-    └── presence_points.csv
+Точки присутствия вида: борщевик Сосновского (**points_plants**).
 
 ## Использованные библиотеки
+
+elapid
+rasterio
+geopandas
+pandas
+numpy
+scikit-learn
+matplotlib
+
+В Google Colab библиотеку elapid можно установить командой: `!pip install elapid -q`
+
+## Результаты
+
+После выполнения ноутбука создаются следующие файлы: `maxent_model.ela, maxent_prediction.tif, permutation_importance.csv`
+
+*maxent_model.ela* — сохранённая модель MaxEnt;
+*maxent_prediction.tif* — raster-карта предсказанной пригодности территории;
+*permutation_importance.csv* — таблица пермутационной важности предикторов.
+
+## Как запустить
+Откройте `sdm-modeling_maxent.ipynb` в Google Colab или Jupyter Notebook.
+Убедитесь, что папка `data_predictors содержит` .tif-растры и CSV с точками присутствия.
+При необходимости измените путь к данным: data_dir = `"/content/drive/MyDrive/data_predictors"`
+После выполнения проверьте созданные результаты в папке `data_predictors`.
