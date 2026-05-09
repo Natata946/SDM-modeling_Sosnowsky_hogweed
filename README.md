@@ -10,7 +10,7 @@
 
 ## Что делает проект
 
-В ноутбуке `sdm-modeling_maxent.ipynb` реализовано SDM-моделирования борщевика Сосновского:
+В ноутбуке `sdm-modeling_maxent_method.ipynb` реализовано SDM-моделирования борщевика Сосновского:
 
 1. загрузка Geotiff-растров из папки `data_predictors`;
 2. загрузка CSV-файла с координатами точек присутствия вида;
@@ -40,11 +40,12 @@
 `numpy`
 `scikit-learn`
 `matplotlib`
+`seaborn`
 
 В Google Colab библиотеку `elapid` можно установить командой: `!pip install elapid -q`
 
 ## Как запустить
-Откройте `sdm-modeling_maxent.ipynb` в Google Colab или Jupyter Notebook.
+Откройте `sdm-modeling_maxent_method.ipynb` в Google Colab или Jupyter Notebook.
 Убедитесь, что папка `data_predictors` содержит .tif-растры и CSV с точками присутствия.
 При необходимости измените путь к данным: data_dir = `"/content/drive/MyDrive/data_predictors"`
 После выполнения проверьте созданные результаты в папке `data_predictors`.
