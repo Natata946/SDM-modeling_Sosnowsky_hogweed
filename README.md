@@ -64,7 +64,7 @@
 
 ## Результаты
 
-После выполнения ноутбука создаются следующие файлы: `maxent_model.ela`, `maxent_prediction.tif`, `permutation_importance.csv`
+После выполнения кода создаются следующие файлы: `maxent_model.ela`, `maxent_prediction.tif`, `permutation_importance.csv`
 
 `maxent_model.ela` — сохранённая модель MaxEnt;
 `maxent_prediction.tif` — raster-карта предсказанной пригодности территории;
